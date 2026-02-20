@@ -1,11 +1,64 @@
-# eShop-complete-project
+# 🏛 E-Commerce System Architecture
 
-Seperated front-end and back-end;
+This repository serves as the central architecture documentation hub for the E-Commerce system.
 
-Go my front-end [eShop-front-end](https://github.com/wenbo2978/eShop-frontend).
+It documents:
 
-Go my back-end(SpringBoot) [eShop-back-end-Spring](https://github.com/wenbo2978/eShops)
+- System architecture
+- Technology stack comparison
+- Event-driven design
+- Deployment strategies
+- Links to all implementation repositories
 
-Go my new back-end(SpringBoot + Docker + AWS (S3 + RDS)) [eShop-back-end-Spring-new](https://github.com/wenbo2978/awsLearningProject)
+---
 
-Go my new back-end(Asp.Net + Docker + AWS (S3)) [eShop-back-end-AspNet](https://github.com/wenbo2978/EShopBackendCSharp)
+# 🔗 Implementation Repositories
+
+| Layer | Technology | Repository |
+|-------|------------|------------|
+| 🎨 Frontend | React | https://github.com/wenbo2978/eShop-frontend |
+| ☕ Backend | Spring Boot | https://github.com/wenbo2978/eShopsBackendSpring |
+| 🧱 Backend | ASP.NET Core | https://github.com/wenbo2978/EShopBackendCSharp |
+| 🐍 Backend | Django | in process |
+
+---
+
+# 🏗 System Architecture Overview
+
+Frontend ➜ REST API ➜ Service Layer ➜ Database  
+                        ↘ RabbitMQ (Async Messaging)
+
+---
+
+# 📦 Core Components
+
+- User Management
+- Product Management
+- Cart & Orders
+- Asynchronous Order Events
+- Authentication & Authorization
+
+---
+
+# 🔄 Event Flow (RabbitMQ)
+
+Order Created ➜ Publish Event ➜ Inventory Update ➜ Email Notification
+
+---
+
+# ☁️ Deployment Strategy
+
+- Dockerized services
+- Docker Compose orchestration
+- AWS EC2 deployment
+- Environment-based configuration
+
+---
+
+# 📐 Design Goals
+
+- Modular architecture
+- Framework-agnostic design
+- Clear separation of concerns
+- Reproducible deployments
+- Scalable service design
